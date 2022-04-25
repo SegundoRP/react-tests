@@ -7,7 +7,7 @@ import CreateTodoButton from './Components/CreateTodoButton'
 // import './App.css';
 
 const todos = [
-  { text: 'Practicar React', completed: false},
+  { text: 'Practicar React', completed: true},
   { text: 'Practicar Rails', completed: false},
   { text: 'Practicar Javascript', completed: false}
 ]
@@ -23,7 +23,10 @@ function App() {
 
       <TodoList >
         {todos.map(todo => (
-          <TodoItem key={todo.text} text={todo.text} />
+          <TodoItem
+            key={todo.text}
+            completed={todo.completed}
+            text={todo.text} />
           // cuando renderizas componentes de listas(arrays) debes poner la propiedad key y react identifique cual es cual de la lista y evite renders innecesarios
         ))}
       </TodoList>
