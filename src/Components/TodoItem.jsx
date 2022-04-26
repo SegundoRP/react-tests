@@ -2,6 +2,10 @@ import React from 'react';
 import '../TodoItem.css';
 
 const TodoItem = (props) => {
+  const onComplete = () => {
+    alert('Ya completaste el todo ' + props.text)
+  }
+
   return (
     <li className="TodoItem">
       <span className={`Icon Icon-check ${props.completed && 'Icon-check--active'}`}>√</span>
